@@ -1,0 +1,41 @@
+.floatLeft  { float:left;  }
+.floatRight { float:right; }
+
+.clearLeft  { clear:left;  }
+.clearRight { clear:right; }
+.clear      { clear:both;  }
+
+.alignLeft      { text-align:left;       }
+.alignRight     { text-align:right;      }
+.alignCenter    { text-align:center;     }
+.alignJustify   { text-align:justify;    }
+.verticalTop    { vertical-align:top;    }
+.verticalMiddle { vertical-align:middle; }
+.verticalBottom { vertical-align:bottom; } 
+
+.bold   { font-weight:bold;  }
+.italic { font-style:italic; }
+
+.width100 { width:100%; }
+.width95  { width:95%;  }
+.width90  { width:90%;  }
+.width85  { width:85%;  }
+.width80  { width:80%;  }
+.width75  { width:75%;  }
+.width70  { width:70%;  }
+.width65  { width:65%;  }
+.width60  { width:60%;  }
+.width55  { width:55%;  }
+.width50  { width:50%;  }
+.width45  { width:45%;  }
+.width40  { width:40%;  }
+.width35  { width:35%;  }
+.width30  { width:30%;  }
+.width25  { width:25%;  }
+.width20  { width:20%;  }
+.width15  { width:15%;  }
+.width10  { width:10%;  }
+.width5   { width:5%;   }
+
+.img-repl { text-indent: -9999px; overflow: hidden; display: block; }
+.wraper   { overflow:hidden; } 

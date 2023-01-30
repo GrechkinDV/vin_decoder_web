@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title> VinTelligent: Solutions </title>
+
+<!--<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />-->
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=windows-1251" />
+
+<meta http-equiv="Content-Language" content="ru" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="all" />
+
+<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!--[if IE]>  <link href="css/ie.css"  rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 6]><link href="css/ie6.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link href="css/ie7.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+<link rel="stylesheet" href="css/opera.css" type="opera/css" media="screen" />
+<link type="text/css" media="screen and (-webkit-min-device-pixel-ratio:0)" href="css/safari3.css" />
+
+<script src="js/pngfix.js" type="text/javascript"></script>
+<script type="text/javascript" src="ac/jquery.js"></script>
+	<script type="text/javascript" src="ac/chili-1.7.pack.js"></script>
+
+	<script type="text/javascript" src=".ac/jquery.easing.js"></script>
+	<script type="text/javascript" src="ac/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="ac/jquery.accordion.js"></script>
+
+	<script type="text/javascript">
+	jQuery().ready(function(){
+		// simple accordion
+    	jQuery('#list1b,#list1a').accordion({
+			autoheight: false,
+      header: '.head',
+      alwaysOpen: false,
+      active: true
+		});
+
+
+
+		// bind to change event of select to control first and seconds accordion
+		// similar to tab's plugin triggerTab(), without an extra method
+		var accordions = jQuery(' #list1b.#list1a');
+
+
+	});
+	</script>
+
+
+</head>
+
+<body>
+
+<div class="header">
+  <a href="index.html"><img src="img/logo.jpg" alt="" class="logo" /></a>
+ <div class="menu">
+			<ul>
+				<li><a class="products" title="" href="products.html">products</a></li>
+				<li><a class="solutions" title="" href="solutions.html">solutions</a></li>
+				<li><a class="service" title="" href="service.html">service</a></li>
+				<li><a class="customers" title="" href="customers.html">customers</a></li>
+				<li><a class="partners" title="" href="partners.html">partners</a></li>
+				<li><a class="support" title="" href="support.html">support</a></li>
+				<li><a class="company" title="" href="company.html">company</a></li>
+			</ul>
+ </div>
+	  <a href="job.html"><img src="img/sticker.jpg" alt="" class="sticker" /></a>
+
+</div><!--/.header -->
+
+<div class="middle wraper">
+  <div class="leftcoll">
+    <div class="tit"><img src="img/solutions.png" alt="" /></div>
+
+  <div class="basic" id="list1b">
+			<a class="head">VinTelligent Architecture</a>
+			<div>
+       <h1 class="frst">What sets VinTelligent apart</h1>
+   <p class="arch">Designed for auto handling operations</p>
+   <p class="arch">Web-based system; allows access anywhere and at anytime.</p>
+   <p class="arch">Real-time data input improves productivity and management effectiveness</p>
+   <p class="arch">Multi-terminal access provides complete and timely information across the company</p>
+   <p class="arch">Automated data collection (Handhelds and Fixed Scanners) increases accuracy and productivity</p>
+   <p class="arch">EDI module provides seamless integration with all trading partners</p>
+   <p class="arch">User friendly interfaces that are easy to learn<br /><br /></p>
+   <img src="img/pics/arc.jpg" class="iml" alt="" />
+
+      </div>
+     </div>
+    <h1 style="margin-top:25px;">Vintelligent Editions : </h1>
+    <div class="basic ve" id="list1a">
+      <a class="head">Terminal</a>
+			<div>
+        <p>Terminal is the base module that supports essential terminal operation.  The Rail and Vessel modules use Terminal Gate functions in their process flows.  Terminal includes the Yard Planning feature as well as other additional feature listed below.  Many Terminal features are available on handheld devices, as well as on the desktop, to enhance productivity.</p>
+
+
+  <h1>Features of the Terminal Module</h1>
+  <p><span>Gate</span><br />Receive	Assigns bay location using parking algorithm.  Sets units to in-inventory status and sends arrival message to trading partners.<br />
+Truck Load List	Facilitates creation of truck loads.  Haulaway carriers may create truck loads in VinTelligent via EDI messages.<br />
+Dispatch	Removes units from inventory and sends shipped message to trading partners.  Units may be dispatched singly or by Truck Load List.</p>
+
+  <p><span>Inventory Management</span><br />Inspection	Records results of inspections.  Tracks inspections by type, such as “Receipt Inspection”.<br />
+Holds and Releases	Records user-defined hold codes and subsequent releases.  Supports multiple concurrent holds.  Sends hold and release messages to trading partners and accepts holds and releases from trading partners via EDI.<br />
+Physical Inventory	Supports physical inventory and reconciliation for all or part of the yard.  Self-reconciles as events are recorded.<br />
+Rebay	Assigns bay locations using the parking algorithm for yard moves. Sends yard move message to trading partners.</p>
+
+  <p><span>ASN Management</span><br />Routing and handling are directed by Advance Shipping Instructions (ASNs) typically received via EDI. VinTelligent also supports manual update of shipping instructions, either by individual ASN or in groups, and ASN reporting.</p>
+
+<p><span>Yard Planning</span><br />Yard Planning is a powerful tool that is used to assign the best open yard space to a unit.  The parking algorithm is based on flexible user-defined rules and supports assignment of units to single vehicle bays, multiple vehicle bays and load lanes.  It enforces all restrictions set for the actual yard location such as the maximum number of vehicles in a bay and the bay status (active / inactive).	</p>
+
+<p><span>General</span><br />Events and Statuses	Enforces business rules regarding status changes. All events and status changes are recorded and may be viewed on the activity log.<br />
+Reports		ASN,  inventory, activities, status, inspection, yard capacity and other reports are provided.</p>
+
+<h1>Additional Features</h1>
+   <p><span>Dashboard </span> - The dashboard provides a one-page management snapshot of ongoing terminal activity.</p>
+   <p><span>VinInsight </span> - VinInsight is the tool that allow operators to give their customers direct access to reports on their own data. </p>
+   <p><span>Security </span> - Role-base security configures user access as appropriate for each job function.</p>
+   <p><span>Archive </span> - Maintains high performance of active operations by archiving completed transactions at user-defined intervals.  Data is viewable on archive reports</p>
+   <p><span>Message Center </span> - Message Center is the control center for the monitoring and managing EDI messages.</p>
+      </div>
+      <a class="head">Rail</a>
+			<div>
+       <p>The VinTelligent Rail Module, in conjunction with the <span class="undr_l">Terminal</span> module, provides comprehensive support for rail ramp operations.  Yard Planning enables definition of parking logic to meet specific needs such baying by dealer area to facilitate truck loading or in load lanes to speed up railcar loading.  Many rail features are available on handheld devices, as well as on the desktop, and may be used on the yard and at the track. Fixed scanners may be used to optimize receipt of vehicles through the plant gate.</p>
+
+  <h1>Features of the Rail Module</h1>
+  <p><span>Railcar Management </span><br />Spotting	Records railcar track location and condition (empty, loaded, bad order).<br />
+Ready To Pull	Sends a message to the railroad that the cars are ready to pull.<br />
+Releasing 	Removes railcar from the track and sends shipped messages for units loaded in railcars.<br />
+Track Sheet	Displays current status of all railcars at ramp.</p>
+
+  <p><span>Inbound Flow</span><br />Bay Assignment	Automated bay assignment speeds unloading of railcars by pre-assigning bays and generating bar-coded bay tickets.<br />
+Grounding	Sets units to in-inventory status and sends arrival messages to trading partners.<br />
+Reconciliation	Report identifies discrepancies between the units planned for grounding and those actually grounded.<br />
+Truck Load List	Facilitates creation of truck loads.  Haulaway carriers may create truck loads in VinTelligent via EDI messages. <span class="italic">(Terminal Module)</span><br />
+Gate Dispatch	Removes units from inventory and sends shipped message to trading partners.  Units may be dispatched singly or by Truck Load List. <span class="italic">(Terminal Module)</span></p>
+
+  <p><span>Outbound Flow</span><br />Gate Receive	Assigns bay location using parking algorithm.  Sets received units to-in inventory status and sends arrival message to trading partners. <span class="italic">(Terminal Module)</span><br />
+Load Planning	Plans railcar loads. Sets up railcar strings for automated loading.<br />
+Rail Loading	Automated loading scans units as they are driven up the buck ramp and automatically records railcar, deck and position for each unit. Manual loading allows user to specify railcar, deck and position.  Both options send loaded status messages to trading partners<br />
+Reconciliation	Report identifies discrepancies between the load plan and the actual load.</p>
+
+  <p><span>General</span><br />Events &amp; Statuses	Enforces business rules regarding status changes. All events and status changes are recorded and may be viewed on the activity log.<br />
+Reports	Specific reports provide details on railcar activities and statuses. Rail Load Planning Reports provide basis for railcar allocation by destination</p>
+
+      </div>
+      <a class="head">Vessel</a>
+			<div>
+          <p>The VinTelligent Vessel Module, in conjunction with the <span class="undr_l">Terminal</span> module, provides comprehensive support for marine terminal operations including handling of vehicles and unitized cargo, such as pallets and bundles. Yard Planning, enables definition of parking logic to meet specific needs such baying by discharge port to speed up vessel loading.  Many vessel features are available on handheld devices, as well as on the desktop, and may be used on the yard and at the dock. Fixed scanners may be used to optimize receipt of vehicles through a plant gate.</p>
+
+
+  <h1>Features of the Vessel Module</h1>
+  <p><span>Voyage Management </span><br />Vessel Definition		Defines vessels that call at your port, including deck/bay, hatch/hold and section.<br />
+Voyage Route		Sets up voyage routes.  Records actual arrival and departure date/times.</p>
+
+  <p><span>Import Flow</span><br />Discharge Planning		Speeds unloading of vessels by pre-assigning parking spaces and generating bar-coded parking tickets.<br />
+Discharge		Sets units to in-inventory status and sends arrival message to trading partners.<br />
+Reconciliation		Report identifies discrepancies between the discharge plan and the actual discharge.<br />
+Truck Load List		Facilitates creation of truck loads.  Haulaway carriers may create truck loads in VinTelligent via EDI messages. <span class="italic">(Terminal Module)</span> <br />
+Gate Dispatch		Removes units from inventory and sends shipped message to trading partners.  Units may be dispatched singly or by Truck Load List. <span class="italic">(Terminal Module)</span></p>
+
+  <p><span>Export Flow</span><br />Gate Receive		Automatically assigns parking spaces using rules defined in Yard Planning.  Sets received units to in-inventory status and sends arrival messages to trading partners. <span class="italic">(Terminal Module)</span> <br />
+Load Planning		Updates status of units to planned for loading and records planned load vessel location (deck/hatch/section). Load Planning Reports assist in vessel load planning.<br />
+Vessel Loading		Scans units as they are driven up the ramp and records loaded status and vessel location. Sends loaded status messages to trading partners. <br />
+Reconciliation 		Report identifies discrepancies between the load plan and the actual load.	</p>
+      </div>
+      <a class="head">Process</a>
+			<div>
+          <p>The Process module supports post-production processing -- modifications, repairs and periodic maintenance for vehicles, as well as defining jobs such as crating or bundling for non-vehicle cargo.  The basis of the Process module is the Job. All details of jobs may be defined, including tasks, parts and pricing.  Job type dictates work flow requirements for the job. Jobs may be assigned via EDI, manually or automatically.  Move jobs utilize the Yard Planning feature to determine the next parking space.  Many Process features are available on handheld devices, as well as on the desktop, and may be used on the yard and in processing areas.</p>
+
+
+  <h1>Features of the Process Module</h1>
+  <p><span>Job Setup </span><br />Job Definition	Defines jobs and set all parameters for managing job.<br />
+Part Setup	Defines parts and kits. <br />
+Task Setup	Defines job tasks.  Tasks may be copied from job to job.<br />
+Bill To Party	Assigns Bill To Parties to jobs.<br />
+Kit of Services	Defines a “kit” of  jobs that may be automatically assigned. </p>
+
+  <p><span>Job Assignment</span><br />Mass Assign	Assigns jobs to a group of vehicles or cargo, as for a manufacturers’ campaign.<br />
+VIN Assign	Assigns one or more jobs to a specific vehicle or cargo.</p>
+
+  <p><span>Job Management</span><br />Plan Jobs	Plans repair and modification jobs and creates work orders.<br />
+Track Jobs	Updates and completes repair and modification work orders as well as field jobs and PDI.<br />
+Track PDI	Special user interface optimizes completion of PDI checklists.	</p>
+
+<p><span>Move Jobs</span><br />Plan Moves 	Plans movement of units from one processing area to another or assigns a pre-defined move sequence.<br />
+Driver Next Move	Using the moves set up by Plan moves, this handheld function automatically assigns the driver a vehicle to move and its next yard location.  After the move, the driver records move completion.<br />
+Track Moves	Updates and completes move jobs.<br />
+Move Sequences	Defines move sequences.	</p>
+
+<p><span>General</span><br />Events &amp; Statuses	Enforces business rules regarding job status changes. All events and status changes are recorded and may be viewed on the activity log.<br />
+Reports	Specific reports provide details on job and work order statuses and activities.
+	</p>
+      </div>
+  </div>
+  </div>
+  
+  <div class="rightcoll">
+      <div class="tit2"></div>
+      <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+        <li><img src="img/pics/a1.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/26.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a2.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a3.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a4.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a5.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a7.jpg" width="227" height="169" /></li>
+        <li><img src="img/pics/a6.jpg" width="227" height="169" /></li>
+
+
+      </ul>
+
+      
+  </div>
+  <div class="b_pol"></div>
+</div><!--/.middle -->
+<div class="footer">
+ <p class="cop_l">Copyright 2016 &copy;  VinTelligent, Inc.  - All Rights Reserved.</p>
+
+
+</div><!--/.footer -->
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
