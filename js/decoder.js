@@ -13,7 +13,7 @@ function html2Element(html) {
 }
 
 function parseDecodeResults(data, id) {
-    return data['Results'][id]['Value'] || '';
+    return data['Results'][id]['Value'] || undefined;
 }
 
 function printDiv() {
@@ -110,22 +110,26 @@ vin_decoder.addEventListener("submit", (evt) => {
         .then((data) => {
             vin_info.innerHTML = '';
             console.log(data['Results'][1], parseDecodeResults(data, 1))
-            if (parseDecodeResults(data, 1) == '0')  { // Check if error code is false
-            decodeStatusEl = html2Element('<b>VIN decoded successfully</b>')
-            decodeStatusEl.appendChild(printPdf);
-            
-            vinEl = html2Element(`<b>VIN:</b> ${vin_input.value.toUpperCase()}`)
-            modelEl = html2Element(`<b>Model:</b> ${parseDecodeResults(data, 9)}`)
-            yearEl = html2Element(`<b>Model Year:</b> ${parseDecodeResults(data, 10)}`)
-            makeEl = html2Element(`<b>Make:</b> ${parseDecodeResults(data, 7)}`)
-
-            vin_info.appendChild(decodeStatusEl);
-            vin_info.appendChild(vinEl);
-            vin_info.appendChild(modelEl);
-            vin_info.appendChild(yearEl);
-            vin_info.appendChild(makeEl);
+            let model = parseDecodeResults(data, 9);
+            let year = parseDecodeResults(data, 10);
+            let make = parseDecodeResults(data, 7);
+            console.log(model, year, make);
+            if (!model && !year && !make)  { // Check if error code is false
+                displayDecodeError();
             } else {
-            displayDecodeError();
+                decodeStatusEl = html2Element('<b>VIN decoded successfully</b>')
+                decodeStatusEl.appendChild(printPdf);
+                
+                vinEl = html2Element(`<b>VIN:</b> ${vin_input.value.toUpperCase()}`)
+                modelEl = html2Element(`<b>Model:</b> ${model || "Can't decode"}`)
+                yearEl = html2Element(`<b>Model Year:</b> ${year || "Can't decode"}`)
+                makeEl = html2Element(`<b>Make:</b> ${make || "Can't decode"}`)
+
+                vin_info.appendChild(decodeStatusEl);
+                vin_info.appendChild(vinEl);
+                vin_info.appendChild(modelEl);
+                vin_info.appendChild(yearEl);
+                vin_info.appendChild(makeEl);
             }
         });
     } catch (e) {
