@@ -95,9 +95,30 @@ function printDiv() {
     exportPdf.print();
 }
 
-function displayDecodeError() {
+function transliterate(x) {
+    return "0123456789.ABCDEFGH..JKLMN.P.R..STUVWXYZ".indexOf(x) % 10;
+};
+
+function validateVin(x) {
+    const map = '0123456789X';
+    const weights = '8765432X098765432';
+
+    var sum = 0;
+
+    for (var i = 0; i < 17; ++i) {
+        sum += transliterate(x.charAt(i)) * map.indexOf(weights.charAt(i));
+    }
+
+    if(x.charAt(8) == map.charAt(sum % 11)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function displayDecodeError(htmlStatus) {
     vin_info.innerHTML = '';
-    decodeStatusEl = html2Element('<b>VIN can\'t be decoded.</b>')
+    decodeStatusEl = html2Element(htmlStatus)
     vin_info.appendChild(decodeStatusEl);
 }
 
@@ -115,8 +136,12 @@ vin_decoder.addEventListener("submit", (evt) => {
             let make = parseDecodeResults(data, 7);
             console.log(model, year, make);
             if (!model && !year && !make)  { // Check if error code is false
-                displayDecodeError();
-            } else {
+                displayDecodeError('<b>VIN can\'t be decoded.</b>');
+            } 
+            else if (!validateVin(vin_input.value)) {
+                displayDecodeError('<b>VIN isn\'t valid.</b>');
+            }
+            else {
                 decodeStatusEl = html2Element('<b>VIN decoded successfully</b>')
                 decodeStatusEl.appendChild(printPdf);
                 
@@ -133,6 +158,6 @@ vin_decoder.addEventListener("submit", (evt) => {
             }
         });
     } catch (e) {
-        displayDecodeError();
+        displayDecodeError('<b>VIN can\'t be decoded.</b>');
     }
 })
