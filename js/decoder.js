@@ -135,12 +135,12 @@ vin_decoder.addEventListener("submit", (evt) => {
             let year = parseDecodeResults(data, 10);
             let make = parseDecodeResults(data, 7);
             console.log(model, year, make);
-            if (!model && !year && !make)  { // Check if error code is false
-                displayDecodeError('<b>VIN can\'t be decoded.</b>');
-            } 
-            else if (!validateVin(vin_input.value)) {
+            if (!validateVin(vin_input.value)) {
                 displayDecodeError('<b>VIN isn\'t valid.</b>');
             }
+            else if (!model && !year && !make)  { // Check if error code is false
+                displayDecodeError('<b>VIN can\'t be decoded.</b>');
+            } 
             else {
                 decodeStatusEl = html2Element('<b>VIN decoded successfully</b>')
                 decodeStatusEl.appendChild(printPdf);
